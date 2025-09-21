@@ -1,0 +1,30 @@
+# DOM Parser & Analyzer - Requirements
+# Dependencies for the DOM Parser component of the LAM system
+
+# Core HTML parsing libraries
+beautifulsoup4>=4.12.0      # Primary HTML parsing library
+lxml>=4.9.0                 # Fast XML/HTML processing backend
+html5lib>=1.1               # HTML5 compliant parsing for complex pages
+
+# CSS selector support
+cssselect>=1.2.0            # CSS selector support for lxml
+
+# Data validation and serialization
+pydantic>=2.0.0             # Data validation and settings management
+
+# Logging
+loguru>=0.7.0               # Modern logging library
+
+# Optional: Enhanced features
+selenium>=4.15.0            # For integration with browser controller (optional)
+requests>=2.31.0            # HTTP requests for external validation (optional)
+
+# Development dependencies (optional)
+pytest>=7.4.0               # Testing framework
+pytest-asyncio>=0.21.0      # Async testing support
+black>=23.0.0               # Code formatting
+mypy>=1.5.0                 # Type checking
+
+# Performance optimizations (optional)
+cchardet>=2.1.7             # Fast character encoding detection
+python-dateutil>=2.8.0     # Enhanced date parsing
