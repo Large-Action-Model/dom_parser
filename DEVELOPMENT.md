@@ -29,13 +29,13 @@ pytest tests/
 ### Code Formatting
 
 ```bash
-black src/ tests/ examples/
+black dom_parser/ tests/ examples/
 ```
 
 ### Type Checking
 
 ```bash
-mypy src/dom_parser/
+mypy dom_parser/
 ```
 
 ## Project Structure

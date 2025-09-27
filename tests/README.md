@@ -69,7 +69,7 @@ python -m pytest tests/test_integration.py -v
 
 ### Run with Coverage
 ```bash
-python -m pytest tests/ --cov=src/dom_parser --cov-report=html
+python -m pytest tests/ --cov=dom_parser --cov-report=html
 ```
 
 ## Test Results Summary
@@ -129,7 +129,7 @@ The test suite uses realistic HTML samples:
 
 ## Notes
 
-- Tests use `sys.path` manipulation to import from `src/` directory
+- Tests use `sys.path` manipulation to import from parent directory
 - All imports are properly structured for the new package organization
 - Tests validate both functionality and proper error handling
 - Integration tests ensure all components work together correctly

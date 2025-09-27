@@ -36,7 +36,7 @@ def lint():
     print("Running linting...")
     success = True
     success &= run_command("flake8 src/ tests/ examples/")
-    success &= run_command("mypy src/dom_parser/")
+    success &= run_command("mypy dom_parser/")
     return success
 
 def test():

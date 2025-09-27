@@ -96,28 +96,27 @@ async with browser:
 
 ```
 dom_parser/
-├── src/
-│   └── dom_parser/
-│       ├── __init__.py              # Package initialization and exports  
-│       ├── core/                    # Core parsing and analysis logic
-│       │   ├── __init__.py
-│       │   ├── dom_parser.py        # Main orchestration class
-│       │   ├── element_classifier.py # Element type detection
-│       │   ├── semantic_extractor.py # Content structure analysis  
-│       │   └── structure_mapper.py  # Page layout analysis
-│       ├── analyzers/               # Specialized analysis modules
-│       │   ├── __init__.py
-│       │   ├── accessibility_analyzer.py # Accessibility features
-│       │   ├── form_analyzer.py     # Form structure analysis
-│       │   └── html_analyzer.py     # HTML parsing & cleaning
-│       ├── types/                   # Data types and models
-│       │   ├── __init__.py
-│       │   ├── dom_data_types.py    # Core data structures
-│       │   └── element_data_types.py # Element enums & types
-│       └── utils/                   # Utility functions
-│           ├── __init__.py
-│           ├── css_selector_generator.py # CSS selector creation
-│           └── xpath_generator.py # XPath expression generation
+├── dom_parser/                      # Main package (moved from src/)
+│   ├── __init__.py                  # Package initialization and exports  
+│   ├── core/                        # Core parsing and analysis logic
+│   │   ├── __init__.py
+│   │   ├── dom_parser.py            # Main orchestration class
+│   │   ├── element_classifier.py   # Element type detection
+│   │   ├── semantic_extractor.py   # Content structure analysis  
+│   │   └── structure_mapper.py     # Page layout analysis
+│   ├── analyzers/                   # Specialized analysis modules
+│   │   ├── __init__.py
+│   │   ├── accessibility_analyzer.py # Accessibility features
+│   │   ├── form_analyzer.py         # Form structure analysis
+│   │   └── html_analyzer.py         # HTML parsing & cleaning
+│   ├── types/                       # Data types and models
+│   │   ├── __init__.py
+│   │   ├── dom_data_types.py        # Core data structures
+│   │   └── element_data_types.py   # Element enums & types
+│   └── utils/                       # Utility functions
+│       ├── __init__.py
+│       ├── css_selector_generator.py # CSS selector creation
+│       └── xpath_generator.py       # XPath expression generation
 ├── tests/                         # Test suite
 ├── examples/                      # Usage examples
 │   └── example_integration.py

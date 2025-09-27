@@ -201,7 +201,7 @@ If you encounter import errors:
 
 3. **Verify package structure:**
    ```bash
-   ls src/dom_parser/
+   ls dom_parser/
    # Should show __init__.py and other modules
    ```
 

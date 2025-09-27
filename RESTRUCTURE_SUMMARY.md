@@ -52,7 +52,7 @@ dom_parser/
 ## 🔄 Changes Made
 
 ### 1. **Source Code Organization**
-- Moved all source code to `src/dom_parser/` following modern Python packaging standards
+- Moved all source code to `dom_parser/` in root directory for simplified imports
 - Organized modules by functionality:
   - **core/**: Main parsing logic
   - **analyzers/**: Specialized analysis modules  

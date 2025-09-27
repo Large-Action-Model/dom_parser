@@ -15,15 +15,14 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="dom-parser-lam",
-    version="1.0.0",
+    version="1.1.0",
     author="LAM Project",
     author_email="your-email@example.com",
     description="DOM Parser & Analyzer component for Large Action Model web automation",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Large-Action-Model/dom_parser",
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
+    packages=find_packages(include=["dom_parser", "dom_parser.*"]),
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
