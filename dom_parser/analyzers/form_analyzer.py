@@ -8,9 +8,11 @@ and form submission patterns for automated form interaction.
 from typing import List, Dict, Any, Optional
 from bs4 import BeautifulSoup, Tag
 
-from data_types import (
-    FormStructure, InteractiveElement, FormFieldType,
-    SemanticType, AccessibilityInfo
+from ..types.dom_data_types import (
+    FormStructure, InteractiveElement, AccessibilityInfo
+)
+from ..types.element_data_types import (
+    FormFieldType, SemanticType
 )
 
 
@@ -95,7 +97,7 @@ class FormAnalyzer:
     
     def _get_field_element_type(self, element: Tag):
         """Get element type for form field."""
-        from data_types import ElementType
+        from ..types.element_data_types import ElementType
         
         if element.name == 'input':
             input_type = element.get('type', 'text').lower()

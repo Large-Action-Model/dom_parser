@@ -8,7 +8,8 @@ and other accessibility features for better AI understanding.
 from typing import Dict, Any, Optional
 from bs4 import BeautifulSoup, Tag
 
-from data_types import AccessibilityInfo, AccessibilityRole
+from ..types.dom_data_types import AccessibilityInfo
+from ..types.element_data_types import AccessibilityRole
 
 
 class AccessibilityAnalyzer:

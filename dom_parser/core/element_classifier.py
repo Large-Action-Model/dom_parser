@@ -10,14 +10,16 @@ import uuid
 from typing import List, Dict, Any, Optional, Set
 from bs4 import BeautifulSoup, Tag
 
-from data_types import (
-    InteractiveElement, ElementType, InteractionType, SemanticType,
-    FormFieldType, AccessibilityInfo, ElementHierarchy,
+from ..types.dom_data_types import (
+    InteractiveElement, AccessibilityInfo, ElementHierarchy
+)
+from ..types.element_data_types import (
+    ElementType, InteractionType, SemanticType, FormFieldType,
     HTML_TAG_TO_ELEMENT_TYPE, INPUT_TYPE_TO_FORM_FIELD_TYPE,
     get_interactive_element_types
 )
-from utils.css_selector_generator import CSSSelectorsGenerator
-from utils.xpath_generator import XPathGenerator
+from ..utils.css_selector_generator import CSSSelectorsGenerator
+from ..utils.xpath_generator import XPathGenerator
 
 
 class ElementClassifier:
@@ -691,7 +693,7 @@ class ElementClassifier:
         if role:
             # Convert string role to AccessibilityRole enum if possible
             try:
-                from data_types.element_data_types import AccessibilityRole
+                from ..types.element_data_types import AccessibilityRole
                 accessibility_info.role = AccessibilityRole(role.upper())
             except (ValueError, ImportError):
                 accessibility_info.attributes['role'] = role

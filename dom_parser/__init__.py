@@ -1,19 +1,19 @@
 """
-DOM Parser & Analyzer Component
+DOM Parser Package
 
 A robust DOM parsing and analysis component for Large Action Model (LAM) systems.
 Processes HTML content from the Browser Controller and provides structured analysis
 for AI-driven web interaction.
 """
 
-from .dom_parser import DOMParser
-from .data_types import (
+from .core.dom_parser import DOMParser
+from .types.dom_data_types import (
     DOMAnalysisResult, InteractiveElement, PageStructure, 
     SemanticBlock, FormStructure, NavigationStructure,
     AccessibilityInfo, PageSection, ContentArea,
     HeaderFooterInfo, ElementHierarchy, NavigationArea, SidebarArea
 )
-from .data_types import (
+from .types.element_data_types import (
     ElementType, InteractionType, SemanticType,
     FormFieldType, AccessibilityRole
 )
@@ -41,6 +41,8 @@ __all__ = [
     "ContentArea",
     "HeaderFooterInfo",
     "ElementHierarchy",
+    "NavigationArea",
+    "SidebarArea",
     
     # Type enums
     "ElementType",
@@ -49,9 +51,6 @@ __all__ = [
     "FormFieldType",
     "AccessibilityRole",
     
-    # Package info
+    # Version
     "__version__",
-    "__author__",
-    "__description__", 
-    "__license__",
 ]

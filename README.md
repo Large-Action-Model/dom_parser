@@ -26,13 +26,24 @@ A powerful, production-ready DOM parser that transforms raw HTML into structured
 
 ### Installation
 
-1. **Clone or copy the DOM Parser component:**
+#### Option 1: Development Installation (Recommended)
 ```bash
-cd your-lam-project
-# Copy the dom_parser directory to your project
+# Clone the repository
+git clone https://github.com/Large-Action-Model/dom_parser.git
+cd dom_parser
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install in development mode
+pip install -e .
+
+# Or install with development dependencies
+pip install -e .[dev]
 ```
 
-2. **Install dependencies:**
+#### Option 2: Direct Installation
 ```bash
 pip install -r requirements.txt
 ```
@@ -85,24 +96,35 @@ async with browser:
 
 ```
 dom_parser/
-├── __init__.py                     # Main exports
-├── dom_parser.py                   # Core orchestration class
-├── html_analyzer.py               # HTML parsing & cleaning
-├── element_classifier.py          # Element type detection
-├── semantic_extractor.py          # Content structure analysis
-├── form_analyzer.py              # Form structure analysis
-├── accessibility_analyzer.py      # Accessibility features
-├── structure_mapper.py            # Page layout analysis
-├── data_types/
-│   ├── __init__.py
-│   ├── dom_data_types.py          # Core data structures
-│   └── element_data_types.py      # Element enums & types
-├── utils/
-│   ├── __init__.py
-│   ├── css_selector_generator.py  # CSS selector creation
-│   └── xpath_generator.py         # XPath expression generation
+├── src/
+│   └── dom_parser/
+│       ├── __init__.py              # Package initialization and exports  
+│       ├── core/                    # Core parsing and analysis logic
+│       │   ├── __init__.py
+│       │   ├── dom_parser.py        # Main orchestration class
+│       │   ├── element_classifier.py # Element type detection
+│       │   ├── semantic_extractor.py # Content structure analysis  
+│       │   └── structure_mapper.py  # Page layout analysis
+│       ├── analyzers/               # Specialized analysis modules
+│       │   ├── __init__.py
+│       │   ├── accessibility_analyzer.py # Accessibility features
+│       │   ├── form_analyzer.py     # Form structure analysis
+│       │   └── html_analyzer.py     # HTML parsing & cleaning
+│       ├── types/                   # Data types and models
+│       │   ├── __init__.py
+│       │   ├── dom_data_types.py    # Core data structures
+│       │   └── element_data_types.py # Element enums & types
+│       └── utils/                   # Utility functions
+│           ├── __init__.py
+│           ├── css_selector_generator.py # CSS selector creation
+│           └── xpath_generator.py # XPath expression generation
+├── tests/                         # Test suite
+├── examples/                      # Usage examples
+│   └── example_integration.py
 ├── docs/                          # Documentation
-├── example_integration.py         # Usage examples
+├── scripts/                       # Build and deployment scripts
+├── setup.py                       # Package configuration
+├── pyproject.toml                 # Development tools configuration
 └── requirements.txt               # Dependencies
 ```
 

@@ -11,8 +11,10 @@ navigation elements, and page organization patterns.
 from typing import List, Dict, Any, Optional
 from bs4 import BeautifulSoup, Tag
 
-from data_types import (
-    SemanticBlock, NavigationStructure, NavigationArea,
+from ..types.dom_data_types import (
+    SemanticBlock, NavigationStructure, NavigationArea
+)
+from ..types.element_data_types import (
     SemanticType, ElementType
 )
 

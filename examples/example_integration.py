@@ -15,16 +15,17 @@ This example shows:
 
 import asyncio
 import sys
+import os
 from pathlib import Path
 from typing import Dict, Any
 
-# Add project paths (adjust as needed for your setup)
-project_root = Path(__file__).parent
-sys.path.insert(0, str(project_root))
+
+# Add the parent directory to the Python path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 # Import DOM Parser
 from dom_parser import DOMParser
-from data_types import ElementType, SemanticType
+from dom_parser.types.element_data_types import ElementType, SemanticType
 
 # Browser Controller imports (adjust path as needed)
 try:

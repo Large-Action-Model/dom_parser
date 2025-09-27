@@ -8,10 +8,11 @@ and builds hierarchical relationships between elements.
 from typing import Dict, Any, Optional, List
 from bs4 import BeautifulSoup, Tag
 
-from data_types import (
+from ..types.dom_data_types import (
     PageStructure, PageSection, NavigationArea, ContentArea,
-    SidebarArea, HeaderFooterInfo, SemanticType
+    SidebarArea, HeaderFooterInfo
 )
+from ..types.element_data_types import SemanticType
 
 
 class StructureMapper:

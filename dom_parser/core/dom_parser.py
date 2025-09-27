@@ -26,17 +26,18 @@ except ImportError:
         timestamp: float
         metadata: Dict[str, Any]
 
-from data_types import (
+from ..types.dom_data_types import (
     DOMAnalysisResult, InteractiveElement, PageStructure,
     SemanticBlock, FormStructure, NavigationStructure,
-    AccessibilityInfo, ElementType
+    AccessibilityInfo
 )
-from html_analyzer import HTMLAnalyzer
-from element_classifier import ElementClassifier
-from semantic_extractor import SemanticExtractor
-from form_analyzer import FormAnalyzer
-from accessibility_analyzer import AccessibilityAnalyzer
-from structure_mapper import StructureMapper
+from ..types.element_data_types import ElementType
+from ..analyzers.html_analyzer import HTMLAnalyzer
+from .element_classifier import ElementClassifier
+from .semantic_extractor import SemanticExtractor
+from ..analyzers.form_analyzer import FormAnalyzer
+from ..analyzers.accessibility_analyzer import AccessibilityAnalyzer
+from .structure_mapper import StructureMapper
 
 
 class DOMParser:
